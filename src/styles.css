@@ -1,3 +1,15 @@
 /* You can add global styles to this file, and also import other style files */
 
 @import "tailwindcss";
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --dark-primary: #151d29;
+    --primary: #2A2A5C;
+    --secondary: #486F99;
+    --tertiary: #D4AD68;
+}

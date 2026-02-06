@@ -1,0 +1,38 @@
+<header class="fixed w-full top-5 z-50 text-white">
+    <nav class="navbar md:hidden">
+        <div class="flex items-center gap-30 sm:gap-34">
+            <a href="#">
+                <img class="w-12" src="/logo-fundo-azul.png" alt="Logo Safra">
+            </a>
+            <div>
+                <button (click)="toggleMenu()">
+                    <lucide-icon [name]="isMenuOpen ? 'X': 'Menu'" class="w-6 h-6"></lucide-icon>
+                </button>
+            </div>
+        </div>
+        @if (isMenuOpen == true) {
+            <div>
+                <ul class="nav-link-list flex flex-col items-end gap-4">
+                    <li class="nav-link-item"><a href="#inicio" class="nav-link">Início</a></li>
+                    <li class="nav-link-item"><a href="#sobre" class="nav-link">Sobre</a></li>
+                    <li class="nav-link-item"><a href="#experiencia" class="nav-link">Experiência</a></li>
+                    <li class="nav-link-item"><a href="#contato" class="nav-link">Contato</a></li>
+                </ul>
+            </div>
+        }
+    </nav>
+    <nav class="navbar hidden md:flex items-center">
+        <a href="#">
+            <img class="w-12" src="/logo-fundo-azul.png" alt="Logo Safra">
+        </a>
+        <ul class="nav-link-list flex gap-4">
+            <li class="nav-link-item"><a href="#inicio" class="nav-link">Início</a></li>
+            <li class="nav-link-item"><a href="#sobre" class="nav-link">Sobre</a></li>
+            <li class="nav-link-item"><a href="#experiencia" class="nav-link">Experiência</a></li>
+            <li class="nav-link-item"><a href="#contato" class="nav-link">Contato</a></li>
+        </ul>
+        <div>
+            <img class="rounded-full w-12 border border-white" src="/foto_bonita.jpg" alt="Foto gustavo" />
+        </div>
+    </nav>
+</header>

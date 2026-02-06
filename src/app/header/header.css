@@ -1,0 +1,38 @@
+.navbar {
+    padding: .5rem 1.5rem;
+    background-color: var(--dark-primary);
+    margin-inline: auto;
+    width: fit-content;
+    border-radius: 50px;
+    gap: 8rem;
+}
+
+.nav-link-list {
+    list-style: none;
+}
+
+.nav-link-item {
+    padding: .5rem;
+}
+
+.nav-link {
+    transition: ease-in-out .5s;
+    position: relative;
+    color: var(--light);
+
+    &:hover:after {
+        width: 100%;
+    }
+
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    height: 1px;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    background-color: var(--light);
+    transition: width .5s;
+}
