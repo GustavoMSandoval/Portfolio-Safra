@@ -1,0 +1,58 @@
+<section id="sobre">
+    <div class="section-container py-25">
+        <div class="flex flex-col gap-20">
+            <h2 class="section-title text-balance">Sobre mim e os meus valores</h2>
+            <div class="flex justify-around flex-col lg:flex-row gap-12">
+                <div class="about-card">
+                    <lucide-icon name="Goal"/>
+                    <h3 class="section-subtitle">Foco em resultado</h3>
+                    <button (click)="openModal('resultado')" class="about-link">ver mais <lucide-icon name="MoveRight" /></button>
+                </div>
+                <div class="about-card">
+                    <lucide-icon name="Rocket" />
+                    <h3 class="section-subtitle">Performance e Escalabilidade</h3>
+                    <button (click)="openModal('performance')" class="about-link">ver mais <lucide-icon name="MoveRight" /></button>
+                </div>
+                <div class="about-card">
+                    <lucide-icon name="SmilePlus" />
+                    <h3 class="section-subtitle">Experiência do Usuário</h3>
+                    <button (click)="openModal('experiência')" class="about-link">ver mais <lucide-icon name="MoveRight" /></button>
+                </div>
+            </div>
+        </div>
+    </div>
+    @if (activeModal) {
+    <div class="fixed inset-0 z-50 flex items-center justify-center p-4">
+        <div (click)="closeModal()" class="absolute inset-0 bg-black/60 backdrop-blur-sm"></div>
+    
+        <div class="relative bg-white rounded-lg max-w-lg w-full p-8 z-10">
+    
+            @switch (activeModal) {
+            @case ('resultado') {
+            <h2 class="text-2xl font-bold">Foco em Resultado</h2>
+            <p class="mt-4">Compromisso com a entrega de soluções de alto impacto que otimizam a eficiência operacional. Minha visão é transformar
+            desafios técnicos em vantagens competitivas, garantindo que cada linha de código contribua para a solidez e o
+            crescimento dos ativos institucionais.</p>
+            }
+            @case ('performance') {
+            <h2 class="text-2xl font-bold">Perfomance e Escalabilidade</h2>
+            <p class="mt-4">Desenvolvimento de arquiteturas resilientes preparadas para a perenidade. No cenário financeiro, a escalabilidade deve
+            caminhar junto com a segurança, garantindo que o sistema suporte grandes volumes de transações com latência mínima e
+            máxima disponibilidade.</p>
+            }
+            @case ('experiência') {
+            <h2 class="text-2xl font-bold">Experiência do Usuário</h2>
+            <p class="mt-4">Criação de interfaces intuitivas que transmitem segurança e exclusividade. O foco é proporcionar uma jornada digital
+            fluida para o cliente, onde a complexidade tecnológica é traduzida em uma experiência simples, elegante e altamente
+            funcional.</p>
+            }
+            }
+    
+            <button (click)="closeModal()"
+                class="mt-8 w-full py-3 border border-primary text-primary hover:bg-primary hover:text-white transition-all duration-300 uppercase tracking-widest text-xs font-bold">
+                Fechar
+            </button>
+        </div>
+    </div>
+    }
+</section>

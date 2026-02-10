@@ -1,0 +1,28 @@
+#sobre {
+    background-color: #c4dbe5;
+}
+
+.about-card {
+    background-color: var(--light);
+    border-radius: 5px;
+    width: 100%;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: self-start;
+    gap: 0.8rem;
+}
+
+.about-link {
+    display: flex;
+    gap: .5rem;
+    color: var(--secondary);
+    font-weight: bold;
+    cursor: pointer;
+    transition: ease-in-out .5s;
+
+    &:hover {
+        color: #c4dbe5;
+        text-decoration: underline;
+    }
+}
