@@ -1,0 +1,16 @@
+#inicio {
+    height: 900px;
+        background-image: linear-gradient(to right,
+                rgba(10, 10, 10, 0.85),
+                #d4ac6881),
+            url('/sede-safra.webp');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+}
+
+.content-container {
+    border-top: 6px solid var(--tertiary);
+    border-bottom: 6px solid var(--tertiary);
+    padding: 2rem 0;
+}
