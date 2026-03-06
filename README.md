@@ -13,3 +13,7 @@ Criei este projeto n√£o apenas com o intuito de demonstrar minhas habilidades t√
 + Typescript
 + Angular
 + TailwindCSS
+
+## Link
+
+https://portfolio-safra-gustavomsandoval.vercel.app/
